@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brainstorming — Academia de Excel Interactiva</title>
+    <meta name="description" content="Aprende Excel desde cero hasta nivel experto con guías visuales, fórmulas, funciones, pestañas y checklist interactiva.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231a2a44'/%3E%3Cpath d='M18 34c8-2 20-10 28-14-4 8-12 20-14 28-3-4-8-8-14-10z' fill='%23c6a34f'/%3E%3C/svg%3E">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#inicio" class="site-logo" aria-label="Brainstorming - inicio" title="Brainstorming">
+                <svg width="30" height="30" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle cx="32" cy="32" r="28" fill="#1a2a44" stroke="#c6a34f" stroke-width="2"/>
+                    <path d="M22 36c8-2 16-10 20-14-3 7-9 15-12 22-2-3-4-6-8-8z" fill="#c6a34f"/>
+                </svg>
+            </a>
+            <nav class="site-nav" role="navigation">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#formulas" class="nav-link">Fórmulas</a></li>
+                    <li><a href="#funciones" class="nav-link">Funciones</a></li>
+                    <li><a href="#pestanas" class="nav-link">Pestañas</a></li>
+                    <li><a href="#checklist" class="nav-link">Checklist</a></li>
+                    <li><a href="#recursos" class="nav-link">Recursos</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="brand">
+            <h1 class="logo" style="font-family: 'Anton', sans-serif;">BRAINSTORMING</h1>
+            <p class="tagline">Academia interactiva 100% enfocada en Excel</p>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero section" data-animate="fade-up">
+            <div class="container hero-layout">
+                <div class="hero-text" data-animate="fade-right">
+                    <span class="badge">Domina Excel paso a paso</span>
+                    <h2>Construye reportes profesionales, dashboards y automatizaciones.</h2>
+                    <p>Aprende con una ruta curada que combina teoría corta, ejercicios guiados y checklist accionable. Desde fórmulas básicas hasta análisis con Power Query.</p>
+                    <div class="cta-group">
+                        <a href="#formulas" class="btn btn-primary">Explorar fórmulas</a>
+                        <a href="#checklist" class="btn btn-outline">Checklist de aprendizaje</a>
+                    </div>
+                </div>
+                <div class="hero-media" data-animate="scale-in">
+                    <img class="excel-logo" src="img/excel.png" alt="Logo de Microsoft Excel">
+                    <div class="glass-card dashboard-preview">
+                        <header>
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                            <strong>Brainstorming Excel Lab</strong>
+                        </header>
+                        <div class="preview-body">
+                            <div class="preview-chart"></div>
+                            <div class="preview-list">
+                                <span>↳ KPI Ventas</span>
+                                <span>↳ Tabla Dinámica</span>
+                                <span>↳ Segmentadores</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">Desplázate</div>
+        </section>
+
+        <section id="conceptos" class="section reveal" data-animate="fade-up">
+            <div class="container conceptos-basicos">
+                <div class="conceptos-texto">
+                    <h2 class="section-title">Conceptos básicos de Excel</h2>
+                    <p>Antes de dominar las fórmulas es clave reconocer los elementos principales de la interfaz de Excel. Aquí tienes un repaso express:</p>
+                    <ul class="conceptos-lista">
+                        <li><strong>Celdas:</strong> cada intersección entre fila y columna donde ingresas datos y fórmulas.</li>
+                        <li><strong>Columnas:</strong> se identifican con letras (A, B, C…) y agrupan celdas de forma vertical.</li>
+                        <li><strong>Filas:</strong> numeradas (1, 2, 3…), contienen celdas de forma horizontal.</li>
+                        <li><strong>Cuadro de nombre:</strong> muestra la referencia de la celda activa (ej. A1) y permite ir a un rango específico.</li>
+                        <li><strong>Barra de fórmulas:</strong> el espacio donde editas y visualizas fórmulas o contenido de la celda activa.</li>
+                        <li><strong>Hojas:</strong> pestañas en la parte inferior para organizar diferentes tablas dentro del mismo libro.</li>
+                    </ul>
+                    <p>Comprender estos conceptos acelera tu flujo de trabajo y te ayuda a navegar cualquier plantilla en segundos.</p>
+                </div>
+                <div class="conceptos-media" data-animate="scale-in">
+                    <img class="conceptos-img" src="img/e-interfaz.jpg" alt="Interfaz básica de Excel">
+                </div>
+            </div>
+        </section>
+
+        <section id="formulas" class="section reveal" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Fórmulas Esenciales</h2>
+                <p class="section-intro">Las funciones más usadas para comenzar a analizar datos. Practica escribiéndolas exactamente como aparecen.</p>
+                <div class="cards formula-grid">
+                    <article class="card">
+                        <h3>Sumas y Promedios</h3>
+                        <div class="code-block">=SUM(A1:B3)<br>=AVERAGE(C2:C20)</div>
+                        <p class="tip">Selecciona rangos con <kbd>Shift</kbd> + <kbd>flechas</kbd> para acelerar tu trabajo.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Contar datos</h3>
+                        <div class="code-block">=COUNT(A:A)<br>=COUNTA(A:A)<br>=COUNTIF(B:B,\">=10\")</div>
+                        <p class="tip">Combina COUNTIFS para aplicar múltiples condiciones simultáneas.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Fechas y textos</h3>
+                        <div class="code-block">=TODAY()<br>=TEXT(TODAY(),\"dd/mm/yyyy\")<br>=CONCAT(A2,\" \",B2)</div>
+                        <p class="tip">Usa TEXT para dar formato sin modificar el valor real.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Mínimos y máximos</h3>
+                        <div class="code-block">=MIN(D2:D100)<br>=MAX(D2:D100)<br>=SMALL(D2:D100,3)</div>
+                        <p class="tip">SMALL y LARGE te ayudan a obtener los n valores principales.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="funciones" class="section alt reveal" data-animate="fade-right">
+            <div class="container">
+                <h2 class="section-title">Guía de Funciones Clave</h2>
+                <p class="section-intro">Explora cada función haciendo clic en su tarjeta. Encontrarás una breve descripción, ejemplos y el resultado esperado, listos para copiar y probar en tu hoja.</p>
+                <div class="function-groups">
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">➕</span>
+                            <h3>1. Funciones Matemáticas y Aritméticas</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module" open>
+                                <summary><span class="module-title">=SUMA(A1:A5)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Suma todos los valores contenidos en el rango indicado.</p>
+                                    <p><strong>Ejemplo:</strong> Si A1=2, A2=3 y A3=5, la fórmula <code>=SUMA(A1:A3)</code> devuelve <code>10</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=PROMEDIO(A1:A5)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Calcula el promedio aritmético de las celdas del rango.</p>
+                                    <p><strong>Ejemplo:</strong> Con valores 2, 3 y 5, <code>=PROMEDIO(A1:A3)</code> devuelve <code>3,33</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MAX(A1:A5)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor más alto dentro del rango.</p>
+                                    <p><strong>Ejemplo:</strong> Si el rango contiene 2, 3 y 5, el resultado es <code>5</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MIN(A1:A5)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor más pequeño del rango.</p>
+                                    <p><strong>Ejemplo:</strong> Para 2, 3 y 5, el resultado es <code>2</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=PRODUCTO(A1:A3)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Multiplica todos los valores del rango indicado.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=PRODUCTO(2;3;4)</code> da como resultado <code>24</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=REDONDEAR(A1;2)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Redondea un número al número de decimales especificado.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=REDONDEAR(3,14159;2)</code> devuelve <code>3,14</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=ABS(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor absoluto (sin signo) del número.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=ABS(-5)</code> produce <code>5</code>.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">📅</span>
+                            <h3>2. Funciones de Fecha y Hora</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=HOY()</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve la fecha actual del sistema.</p>
+                                    <p><strong>Ejemplo:</strong> Si hoy es 12/11/2025, la función mostrará <code>12/11/2025</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=AHORA()</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve la fecha y hora actuales.</p>
+                                    <p><strong>Ejemplo:</strong> Podría devolver <code>12/11/2025 14:30</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=AÑO(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Extrae el año de una fecha.</p>
+                                    <p><strong>Ejemplo:</strong> Si A1 = 12/11/2025, el resultado es <code>2025</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MES(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el número del mes (1-12).</p>
+                                    <p><strong>Ejemplo:</strong> Para 12/11/2025, devuelve <code>11</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=DIA(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Extrae el día del mes.</p>
+                                    <p><strong>Ejemplo:</strong> Para 12/11/2025, devuelve <code>12</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=DIAS(A1;B1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Calcula la cantidad de días entre dos fechas.</p>
+                                    <p><strong>Ejemplo:</strong> Si B1 es 15/12/2025 y A1 es 15/11/2025, el resultado es <code>30</code>.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">🔠</span>
+                            <h3>3. Funciones de Texto</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=CONCATENAR(A1; " "; B1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Une varios textos en una sola celda e inserta espacios u otros caracteres.</p>
+                                    <p><strong>Ejemplo:</strong> Con A1="Hola" y B1="Mundo", devuelve <code>Hola Mundo</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=IZQUIERDA(A1;3)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Extrae un número determinado de caracteres desde la izquierda.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=IZQUIERDA("Excel";3)</code> produce <code>"Exc"</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=DERECHA(A1;2)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Extrae caracteres desde la derecha del texto.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=DERECHA("Excel";2)</code> devuelve <code>"el"</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=LARGO(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Cuenta cuántos caracteres tiene un texto.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=LARGO("Excel")</code> da <code>5</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MAYUSC(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Convierte el texto a mayúsculas.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=MAYUSC("excel")</code> devuelve <code>EXCEL</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MINUSC(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Convierte el texto a minúsculas.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=MINUSC("EXCEL")</code> devuelve <code>excel</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=NOMPROPIO(A1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Capitaliza la primera letra de cada palabra.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=NOMPROPIO("juan pérez")</code> genera <code>Juan Pérez</code>.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">🧠</span>
+                            <h3>4. Funciones Lógicas</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=SI(A1>10; "Alto"; "Bajo")</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Evalúa una condición y devuelve un texto según sea verdadero o falso.</p>
+                                    <p><strong>Ejemplo:</strong> Si A1=12, aparece <code>Alto</code>; si es 8, aparece <code>Bajo</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=Y(A1>5;B1<10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve VERDADERO solo si todas las condiciones son verdaderas.</p>
+                                    <p><strong>Ejemplo:</strong> Con A1=6 y B1=8, <code>=Y(A1>5;B1<10)</code> devuelve <code>VERDADERO</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=O(A1>5;B1<10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve VERDADERO si al menos una condición se cumple.</p>
+                                    <p><strong>Ejemplo:</strong> Con A1=3 y B1=8, el resultado es <code>VERDADERO</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=NO(A1>10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Invierte el valor lógico de la expresión.</p>
+                                    <p><strong>Ejemplo:</strong> Si A1=12, <code>=NO(A1>10)</code> devuelve <code>FALSO</code>.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">🔍</span>
+                            <h3>5. Funciones de Búsqueda y Referencia</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=BUSCARV("Juan"; A2:C10; 3; FALSO)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Busca un valor en la primera columna y devuelve un dato de la misma fila.</p>
+                                    <p><strong>Ejemplo:</strong> Recupera el valor de la columna 3 donde se encuentre «Juan».</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=INDICE(A1:C3;2;3)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor que se encuentra en la fila y columna indicadas de un rango.</p>
+                                    <p><strong>Ejemplo:</strong> Obtiene el dato de la fila 2, columna 3 en el rango A1:C3.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=COINCIDIR("Juan"; A1:A5; 0)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve la posición en la que aparece un valor dentro de un rango.</p>
+                                    <p><strong>Ejemplo:</strong> Si «Juan» está en la tercera fila de A1:A5, el resultado es <code>3</code>.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=DESREF(A1;2;1)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Se desplaza desde una celda de referencia para entregar otro valor.</p>
+                                    <p><strong>Ejemplo:</strong> Partiendo de A1, avanza 2 filas y 1 columna para devolver la celda correspondiente.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">📊</span>
+                            <h3>6. Funciones Estadísticas</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=CONTAR(A1:A10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Cuenta cuántas celdas del rango contienen números.</p>
+                                    <p><strong>Ejemplo:</strong> Útil para saber cuántos registros con valores numéricos tienes.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=CONTARA(A1:A10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Cuenta celdas no vacías, incluyendo textos.</p>
+                                    <p><strong>Ejemplo:</strong> Ideal para conocer la cantidad total de registros capturados.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=CONTAR.SI(A1:A10;">10")</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Cuenta las celdas que cumplen una condición específica.</p>
+                                    <p><strong>Ejemplo:</strong> <code>=CONTAR.SI(A1:A10;">10")</code> devuelve cuántos valores superan 10.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=CONTAR.SI.CONJUNTO(...)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Cuenta celdas cumpliendo múltiples criterios simultáneamente.</p>
+                                    <p><strong>Ejemplo:</strong> Utiliza rangos por región y producto para filtrar ventas específicas.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MEDIANA(A1:A10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor central de una lista ordenada.</p>
+                                    <p><strong>Ejemplo:</strong> Útil cuando quieres un indicador menos sensible a valores extremos.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=MODA(A1:A10)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor más repetido en el rango.</p>
+                                    <p><strong>Ejemplo:</strong> Ideal para identificar el producto más vendido.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                    <article class="function-group">
+                        <header>
+                            <span class="group-icon">💲</span>
+                            <h3>7. Funciones Financieras</h3>
+                        </header>
+                        <div class="function-modules">
+                            <details class="function-module">
+                                <summary><span class="module-title">=VF(tasa; nper; pago; [va])</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Calcula el valor futuro de una serie de pagos o inversiones.</p>
+                                    <p><strong>Ejemplo:</strong> Con tasa=0,05, nper=12 y pago=-100, obtienes el monto acumulado al final del periodo.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=VA(tasa; nper; pago; [vf])</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Devuelve el valor presente de una serie de pagos futuros.</p>
+                                    <p><strong>Ejemplo:</strong> Con tasa=0,05 y nper=12, puedes calcular cuánto vale hoy una renta periódica.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=PAGO(tasa; nper; va)</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Calcula el pago periódico de un préstamo o inversión.</p>
+                                    <p><strong>Ejemplo:</strong> Para tasa=0,12/12, nper=24 y va=5000, obtienes la cuota mensual aproximada.</p>
+                                </div>
+                            </details>
+                            <details class="function-module">
+                                <summary><span class="module-title">=TASA(nper; pago; va; [vf])</span></summary>
+                                <div class="module-body">
+                                    <p><strong>Descripción:</strong> Encuentra la tasa de interés efectiva de un flujo de pagos.</p>
+                                    <p><strong>Ejemplo:</strong> Con nper=24, pago=-250 y va=5000, devuelve la tasa real del financiamiento.</p>
+                                </div>
+                            </details>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="pestanas" class="section reveal" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Explora las Pestañas de Excel</h2>
+                <p class="section-intro">Haz clic en una pestaña para descubrir las herramientas clave y atajos.</p>
+                <div class="tab-interface">
+                    <div class="tab-nav">
+                        <button class="tab-button active" data-tab="inicio">Inicio</button>
+                        <button class="tab-button" data-tab="insertar">Insertar</button>
+                        <button class="tab-button" data-tab="datos">Datos</button>
+                        <button class="tab-button" data-tab="analisis">Análisis</button>
+                    </div>
+                    <div class="tab-panels">
+                        <div class="tab-panel active" data-tab-panel="inicio">
+                            <h3>Formato y organización</h3>
+                            <p>Aplica estilos rápidos, formatos condicionales y crea tablas inteligentes. Atajo estrella: <kbd>Ctrl</kbd> + <kbd>T</kbd>.</p>
+                            <ul class="pill-list">
+                                <li>Formato condicional</li>
+                                <li>Tabla</li>
+                                <li>Buscar y seleccionar</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" data-tab-panel="insertar">
+                            <h3>Visualizaciones y objetos</h3>
+                            <p>Gráficos, tablas dinámicas, segmentadores y elementos visuales para dashboards.</p>
+                            <ul class="pill-list">
+                                <li>Gráfico recomendado</li>
+                                <li>Tabla dinámica</li>
+                                <li>Segmentadores</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" data-tab-panel="datos">
+                            <h3>Limpieza y conexiones</h3>
+                            <p>Importa datos, quita duplicados y actualiza conexiones. Aquí vive Power Query.</p>
+                            <ul class="pill-list">
+                                <li>Obtener y transformar</li>
+                                <li>Ordenar & filtrar</li>
+                                <li>Validación de datos</li>
+                            </ul>
+                        </div>
+                        <div class="tab-panel" data-tab-panel="analisis">
+                            <h3>Modelado y automatización</h3>
+                            <p>Usa el análisis rápido, escenarios, macros y complemento Solver para decisiones avanzadas.</p>
+                            <ul class="pill-list">
+                                <li>What-if analysis</li>
+                                <li>Solver</li>
+                                <li>Macros</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt reveal" data-animate="fade-up" id="pestanas-tabla">
+            <div class="container">
+                <h2 class="section-title">Pestañas de la cinta de opciones</h2>
+                <p class="section-intro">Consulta rápidamente qué encontrarás en cada pestaña de Excel. Usa esta guía como referencia mientras practicas.</p>
+                <div class="table-wrapper ribbon-table">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Pestaña</th>
+                                <th>Función principal</th>
+                                <th>Ejemplos de herramientas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Inicio</td>
+                                <td>Contiene las herramientas básicas de edición y formato.</td>
+                                <td>Fuente, alineación, colores, formato de número, bordes, copiar/pegar, estilos de celda, insertar/eliminar filas y columnas.</td>
+                            </tr>
+                            <tr>
+                                <td>Insertar</td>
+                                <td>Permite agregar elementos al libro.</td>
+                                <td>Tablas, gráficos, imágenes, formas, SmartArt, hipervínculos, minigráficos, tablas dinámicas.</td>
+                            </tr>
+                            <tr>
+                                <td>Diseño de página</td>
+                                <td>Controla el aspecto de la hoja al imprimir o visualizar.</td>
+                                <td>Márgenes, orientación, tamaño de papel, fondo de hoja, saltos de página, temas y colores.</td>
+                            </tr>
+                            <tr>
+                                <td>Fórmulas</td>
+                                <td>Contiene todas las funciones y herramientas para cálculos.</td>
+                                <td>Insertar función, nombres definidos, auditoría de fórmulas, cálculo automático.</td>
+                            </tr>
+                            <tr>
+                                <td>Datos</td>
+                                <td>Sirve para gestionar, ordenar, filtrar y analizar información.</td>
+                                <td>Ordenar y filtrar, validar datos, importar datos externos, texto en columnas, quitar duplicados, conexiones.</td>
+                            </tr>
+                            <tr>
+                                <td>Revisar</td>
+                                <td>Herramientas para revisión y control del documento.</td>
+                                <td>Ortografía, comentarios, notas, control de cambios, proteger hoja o libro, traducir.</td>
+                            </tr>
+                            <tr>
+                                <td>Vista</td>
+                                <td>Controla cómo se muestra la hoja de cálculo.</td>
+                                <td>Vistas personalizadas, líneas de cuadrícula, encabezados, zoom, inmovilizar paneles, ventana nueva.</td>
+                            </tr>
+                            <tr>
+                                <td>Archivo (Backstage)</td>
+                                <td>Gestiona el archivo como documento.</td>
+                                <td>Nuevo, abrir, guardar, guardar como, imprimir, compartir, exportar, opciones.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="section-subtitle">🟨 Pestañas contextuales</h3>
+                <p class="section-intro">Aparecen cuando seleccionas objetos especiales (tablas, gráficos, imágenes, formas). Se activan solo cuando las necesitas.</p>
+                <div class="table-wrapper ribbon-table">
+                    <table class="info-table">
+                        <thead>
+                            <tr>
+                                <th>Pestaña contextual</th>
+                                <th>Cuándo aparece</th>
+                                <th>Ejemplos de funciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Diseño de tabla</td>
+                                <td>Al seleccionar una tabla</td>
+                                <td>Cambiar estilo de tabla, agregar fila de totales.</td>
+                            </tr>
+                            <tr>
+                                <td>Diseño/Formato de gráfico</td>
+                                <td>Al seleccionar un gráfico</td>
+                                <td>Cambiar colores, tipo de gráfico, etiquetas, títulos.</td>
+                            </tr>
+                            <tr>
+                                <td>Herramientas de imagen</td>
+                                <td>Al seleccionar una imagen</td>
+                                <td>Ajustar brillo, recorte, bordes, efectos.</td>
+                            </tr>
+                            <tr>
+                                <td>Herramientas de dibujo</td>
+                                <td>Al seleccionar una forma o cuadro de texto</td>
+                                <td>Colores, estilos, alineación, efectos y orden.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ribbon-image" data-animate="scale-in">
+                    <img src="img/Gemini_Generated_Image_6jv9gh6jv9gh6jv9.png" alt="Ejemplo visual de pestañas de Excel" class="ribbon-visual">
+                </div>
+            </div>
+        </section>
+
+        <section id="checklist" class="section alt reveal" data-animate="fade-right">
+            <div class="container">
+                <h2 class="section-title">Checklist de Cosas por Hacer</h2>
+                <p class="section-intro">Completa cada paso para dominar Excel. Marca los ítems que ya practicaste.</p>
+                <div class="todo-board">
+                    <article class="todo-card">
+                        <h3>Bases sólidas</h3>
+                        <ul class="todo-list">
+                            <li class="todo-item" data-todo="formatos">✔ Dominar formatos de celda y formatos rápidos</li>
+                            <li class="todo-item" data-todo="tablas">✔ Convertir rangos en tablas con <kbd>Ctrl</kbd> + <kbd>T</kbd></li>
+                            <li class="todo-item" data-todo="graficos">✔ Insertar y personalizar gráficos básicos</li>
+                        </ul>
+                    </article>
+                    <article class="todo-card">
+                        <h3>Análisis</h3>
+                        <ul class="todo-list">
+                            <li class="todo-item" data-todo="sumifs">✔ Crear reportes con SUMIFS</li>
+                            <li class="todo-item" data-todo="pivot">✔ Construir tablas dinámicas con segmentadores</li>
+                            <li class="todo-item" data-todo="powerquery">✔ Automatizar limpieza con Power Query</li>
+                        </ul>
+                    </article>
+                    <article class="todo-card">
+                        <h3>Automatización</h3>
+                        <ul class="todo-list">
+                            <li class="todo-item" data-todo="macros">✔ Grabar una macro simple</li>
+                            <li class="todo-item" data-todo="plantillas">✔ Diseñar una plantilla de reporte</li>
+                            <li class="todo-item" data-todo="dashboards">✔ Publicar dashboard interactivo</li>
+                        </ul>
+                    </article>
+                </div>
+                <button class="btn btn-outline reset-checklist">Reiniciar checklist</button>
+            </div>
+        </section>
+
+        <section id="recursos" class="section reveal" data-animate="fade-up">
+            <div class="container">
+                <h2 class="section-title">Recursos y Atajos</h2>
+                <div class="resource-grid">
+                    <article class="card">
+                        <h3>Plantilla de prácticas</h3>
+                        <p>Descarga un archivo con ejercicios de fórmulas, tablas dinámicas y gráficos.</p>
+                        <a class="btn btn-primary" href="#" role="button">Descargar (.xlsx)</a>
+                    </article>
+                    <article class="card">
+                        <h3>Atajos esenciales</h3>
+                        <div class="tip">
+                            <p><kbd>Ctrl</kbd> + <kbd>E</kbd> ➜ Flash Fill</p>
+                            <p><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd> ➜ Activar filtros</p>
+                            <p><kbd>Alt</kbd> ➜ Acceso directo a la cinta</p>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <h3>Ruta de aprendizaje</h3>
+                        <p>Sigue la secuencia sugerida: fundamentos → análisis → automatización. Incluye recursos recomendados.</p>
+                        <a class="btn btn-outline" href="#checklist">Ver checklist</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>© <span id="year"></span> Brainstorming. Todos los derechos reservados.</p>
+            <a class="to-top" href="#top" aria-label="Volver arriba">↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
